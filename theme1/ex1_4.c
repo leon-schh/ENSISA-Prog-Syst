@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main() {
-    char word[100]; // assume words < 100 chars
+    char word[100];
     int index = 0;
     int in_word = 0;
     int c;
