@@ -8,7 +8,7 @@ int main() {
     size_t len = 0;
     ssize_t read = getline(&line, &len, stdin);
     if (read == -1) return 1;
-    char *output = malloc(2 * read + 1); // worst case
+    char *output = malloc(2 * read + 1);
     int out_index = 0;
     for (int i = 0; line[i] != '\0'; i++) {
         char c = line[i];
@@ -24,7 +24,6 @@ int main() {
             else if (c == '\'') output[out_index++] = '\'';
             else if (c == '\"') output[out_index++] = '\"';
             else {
-                // octal
                 output[out_index++] = (c / 64) + '0';
                 output[out_index++] = ((c / 8) % 8) + '0';
                 output[out_index++] = (c % 8) + '0';

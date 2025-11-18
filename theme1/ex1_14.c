@@ -16,7 +16,7 @@ unsigned int lire_16(void) {
         if (isdigit(c)) digit = c - '0';
         else if (c >= 'a' && c <= 'f') digit = 10 + (c - 'a');
         else if (c >= 'A' && c <= 'F') digit = 10 + (c - 'A');
-        else continue; // ignore invalid
+        else continue; 
         value = (value << 4) | digit;
     }
     free(line);

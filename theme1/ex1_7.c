@@ -9,7 +9,6 @@ int main() {
     ssize_t read1 = getline(&line1, &len1, stdin);
     ssize_t read2 = getline(&line2, &len2, stdin);
     if (read1 == -1 || read2 == -1) return 1;
-    // Remove \n
     if (line1[read1-1] == '\n') line1[read1-1] = '\0';
     if (line2[read2-1] == '\n') line2[read2-1] = '\0';
     size_t l1 = strlen(line1);

@@ -23,14 +23,12 @@ int main() {
             }
         }
     }
-    // If last line not ended
     if (index > 0) {
         buffer[current][index] = '\0';
         lengths[current] = index;
         current = (current + 1) % LINES;
         if (count < LINES) count++;
     }
-    // Now print the last count lines
     int start = (current - count + LINES) % LINES;
     for (int i = 0; i < count; i++) {
         int pos = (start + i) % LINES;

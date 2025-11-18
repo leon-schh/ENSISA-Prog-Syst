@@ -22,15 +22,13 @@ int main() {
             else if (line[i] == '\'') output[out_index++] = '\'';
             else if (line[i] == '\"') output[out_index++] = '\"';
             else if (isdigit(line[i])) {
-                // octal
                 int val = 0;
                 for (int j = 0; j < 3 && isdigit(line[i+j]); j++) {
                     val = val * 8 + (line[i+j] - '0');
                 }
                 output[out_index++] = val;
-                i += 2; // since i++ at end
+                i += 2; 
             } else {
-                // invalid, copy as is
                 output[out_index++] = line[i];
             }
         } else {
